@@ -7,7 +7,18 @@ class Spacecraft:
 
     # Methods for movement and rotation
     def move_forward(self):
-        pass
+         if self.direction == 'N':
+            self.y += 1
+         elif self.direction == 'S':
+            self.y -= 1
+         elif self.direction == 'E':
+            self.x += 1
+         elif self.direction == 'W':
+            self.x -= 1
+         elif self.direction == 'Up':
+            self.z += 1
+         elif self.direction == 'Down':
+            self.z -= 1
 
     def move_backward(self):
         pass
