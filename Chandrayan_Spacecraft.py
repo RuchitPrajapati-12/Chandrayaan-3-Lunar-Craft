@@ -55,7 +55,8 @@ class Spacecraft:
             self.direction = 'N'
 
     def turn_up(self):
-        pass
+        if self.direction in ['N', 'S', 'E', 'W']:
+            self.direction = 'Up'
 
     def turn_down(self):
         pass
