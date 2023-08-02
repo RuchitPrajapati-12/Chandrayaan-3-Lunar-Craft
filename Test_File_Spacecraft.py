@@ -15,5 +15,10 @@ class TestSpacecraft(unittest.TestCase):
         spacecraft.move_forward()
         self.assertEqual(spacecraft.y, 1)
 
+    def test_move_backward(self):
+        spacecraft = Spacecraft(0, 0, 0, 'N')
+        spacecraft.move_backward()
+        self.assertEqual(spacecraft.y, -1)
+
 if __name__ == '__main__':
     unittest.main()
