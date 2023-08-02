@@ -25,5 +25,10 @@ class TestSpacecraft(unittest.TestCase):
         spacecraft.turn_left()
         self.assertEqual(spacecraft.direction, 'W')
 
+    def test_turn_right(self):
+        spacecraft = Spacecraft(0, 0, 0, 'N')
+        spacecraft.turn_right()
+        self.assertEqual(spacecraft.direction, 'E')
+
 if __name__ == '__main__':
     unittest.main()
