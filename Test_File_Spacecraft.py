@@ -39,7 +39,16 @@ class TestSpacecraft(unittest.TestCase):
         spacecraft = Spacecraft(0, 0, 0, 'N')
         spacecraft.turn_down()
         self.assertEqual(spacecraft.direction, 'Down')
+    
+    def test_execute_commands(self):
+        spacecraft = Spacecraft(0, 0, 0, 'N')
+        commands = ["f", "r", "u", "b", "l"]
+        spacecraft.execute_commands(commands)
+        self.assertEqual(spacecraft.x, 0)
+        self.assertEqual(spacecraft.y, 1)
+        self.assertEqual(spacecraft.z, -1)
+        self.assertEqual(spacecraft.direction, 'W')
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)
