@@ -35,7 +35,14 @@ class Spacecraft:
             self.z += 1
 
     def turn_left(self):
-        pass
+        if self.direction == 'N':
+            self.direction = 'W'
+        elif self.direction == 'S':
+            self.direction = 'E'
+        elif self.direction == 'E':
+            self.direction = 'N'
+        elif self.direction == 'W':
+            self.direction = 'S'
 
     def turn_right(self):
         pass
