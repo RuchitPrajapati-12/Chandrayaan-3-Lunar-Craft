@@ -59,7 +59,8 @@ class Spacecraft:
             self.direction = 'Up'
 
     def turn_down(self):
-        pass
+        if self.direction in ['N', 'S', 'E', 'W']:
+            self.direction = 'Down'
 
     def execute_commands(self, commands):
         pass
